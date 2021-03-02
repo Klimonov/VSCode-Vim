@@ -1,11 +1,115 @@
 {
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "diffEditor.ignoreTrimWhitespace": false,
   "workbench.iconTheme": "vscode-icons",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira code'",
+  "eslint.alwaysShowStatus": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#007ACC",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["C-j"],
+        "commands": [
+            "workbench.action.navigateDown",
+        ]
+    },
+    {
+      "before": ["C-k"],
+      "commands": [
+          "workbench.action.navigateUp",
+      ]
+    },
+    {
+      "before": ["C-h"],
+      "commands": [
+          "workbench.action.navigateLeft",
+      ]
+    },
+    {
+      "before": ["C-l"],
+      "commands": [
+          "workbench.action.navigateRight",
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<Space>"],
+      "commands": [
+          "whichkey.show",
+      ]
+    },
+    {
+      "before": ["C-j"],
+      "commands": [
+          "workbench.action.navigateDown",
+      ]
+    },
+    {
+      "before": ["C-k"],
+      "commands": [
+          "workbench.action.navigateUp",
+      ]
+    },
+    {
+      "before": ["C-h"],
+      "commands": [
+          "workbench.action.navigateLeft",
+      ]
+    },
+    {
+      "before": ["C-l"],
+      "commands": [
+          "workbench.action.navigateRight",
+      ]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "vetur.validation.templateProps": true,
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.wordWrap": "on",
+  "gitlens.currentLine.enabled": false,
+  "git.autofetch": true,
+  "turboConsoleLog.quote": "'",
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
   "vsicons.dontShowNewVersionMessage": true,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.vim",
-  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
-  "window.zoomLevel": 1,
   "whichkey.sortOrder": "alphabetically",
   "whichkey.delay": 0,
   "whichkey.bindings": [
@@ -19,7 +123,7 @@
       "key": "/",
       "name": "comment",
       "type": "command",
-      "command": "vscode-neovim.send",
+      "command": "vim.send",
       "args": "<C-/>"
     },
     {
@@ -974,19 +1078,8 @@
   "sync.gist": "939951904a077b97f8001bc35f6b5948",
   "gitlens.hovers.currentLine.over": "line",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.pythonPath": "/home/chris/.miniconda/envs/ds/bin/python",
-  "java.semanticHighlighting.enabled": true,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chris/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "workbench.list.automaticKeyboardNavigation": false,
-  "oneDarkPro.editorTheme": "onedarkPro",
-  "python.languageServer": "Pylance",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "kite.showWelcomeNotificationOnStartup": false,
-  "python.terminal.activateEnvironment": false,
   "editor.cursorBlinking": "solid",
-  "editor.fontFamily": "FiraCode Nerd Font Mono, Hack, Menlo, Monaco, 'Courier New', monospace",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -994,24 +1087,9 @@
     "**/.factorypath": true
   },
   "terminal.external.osxExec": "iTerm.app",
-  "editor.minimap.enabled": false,
   "workbench.activityBar.visible": true,
-  "leetcode.workspaceFolder": "/Users/chris/Repos/leetcode",
-  "leetcode.defaultLanguage": "javascript",
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.commentDescription": false,
-  "window.menuBarVisibility": "toggle",
-  "python.dataScience.alwaysTrustNotebooks": true,
-  "python.condaPath": "$HOME/.miniconda/bin/conda",
-  "python.formatting.provider": "black",
-  "python.insidersChannel": "off",
   "terminal.integrated.shell.linux": "/bin/zsh",
   "terminal.external.linuxExec": "/usr/bin/alacritty",
-  "code-runner.executorMap": {
-    "python": "$pythonPath $fileName",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
   "editor.tokenColorCustomizations": {
     "[One Dark Pro]": {
       "textMateRules": [
@@ -1087,56 +1165,24 @@
       ]
     }
   },
-  "workbench.colorCustomizations": {
-    "[Default Dark+]": {
-      "statusBar.background": "#2E2E2E",
-      "statusBar.foreground": "#8C8C8C",
-      "statusBarItem.remoteBackground": "#2E2E2E",
-      "statusBarItem.remoteForeground": "#8C8C8C",
-      "activityBar.background": "#2E2E2E",
-      "tab.inactiveBackground": "#2E2E2E"
-    },
-    "[One Dark Pro]": {
-      "editor.background": "#1e2127",
-      "terminal.foreground": "#abb2bf",
-      "terminal.ansiBlack": "#1e2127",
-      "terminal.ansiBlue": "#61afef",
-      "terminal.ansiCyan": "#56b6c2",
-      "terminal.ansiGreen": "#98C379",
-      "terminal.ansiMagenta": "#c678dd",
-      "terminal.ansiRed": "#e06c75",
-      "terminal.ansiWhite": "#abb2bf",
-      "terminal.ansiYellow": "#d19a66",
-      "terminal.ansiBrightBlack": "#5c6370",
-      "terminal.ansiBrightBlue": "#61afef",
-      "terminal.ansiBrightCyan": "#56b6c2",
-      "terminal.ansiBrightGreen": "#98c379",
-      "terminal.ansiBrightMagenta": "#c678dd",
-      "terminal.ansiBrightRed": "#e06c75",
-      "terminal.ansiBrightWhite": "#ffffff",
-      "terminal.ansiBrightYellow": "#d19a66"
-    }
-  },
   "gitlens.advanced.telemetry.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "emmet.showSuggestionsAsSnippets": true,
   "material-icon-theme.showWelcomeMessage": false,
   "gitlens.codeLens.enabled": false,
-  "git.autofetch": true,
   "workbench.startupEditor": "newUntitledFile",
-  "python.showStartPage": false,
   "editor.snippetSuggestions": "bottom",
-  "eslint.alwaysShowStatus": true,
-  "eslint.codeAction.showDocumentation": {
-    "enable": true
+  "workbench.colorTheme": "Default Dark+",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "eslint.format.enable": true,
-  "eslint.lintTask.enable": true,
-  "vetur.validation.templateProps": true,
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "window.zoomLevel": 1,
+  "editor.linkedEditing": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
